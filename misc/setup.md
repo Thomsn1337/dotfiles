@@ -7,5 +7,5 @@
 # Package installation
 
 ```sh
-    sudo pacman -S - < pkglist.txt
+sudo pacman -S - < pkglist.txt
 ```

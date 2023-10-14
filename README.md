@@ -18,31 +18,31 @@ I manage my dotfiles using a ***Git bare repository**. A setup guide for this me
 Clone the bare repository.
 
 ``` sh
-    git clone --bare git@github.com:Thomsn1337/dotfiles.git ~/.dotfiles
+git clone --bare git@github.com:Thomsn1337/dotfiles.git ~/.dotfiles
 ```
 
 Create a temporary alias in your current shell scope to access the repository.
 
 ``` sh
-    alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
 Configure the bare repository to ignore untracked files.
 
 ``` sh
-    dots config --local status.showUntrackedFiles no
+dots config --local status.showUntrackedFiles no
 ```
 
 Checkout the content of the repository.
 
 ``` sh
-    dots checkout
+dots checkout
 ```
 
 This last step might fail because of existing config files. Delete them or back them up if needed and repeat this step.
 
 # System-wide configs
 
-The `misc` folder contains some system-wide configs and a package list of all required packages. Right now, they have to be installed manually. Instructions can be found in `setup.org`.
+The `misc` folder contains some system-wide configs and a package list of all required packages. Right now, they have to be installed manually. Instructions can be found in `setup.md`.
 
 - [ ] Setup script
