@@ -1,6 +1,6 @@
 This is a collection of my dotfiles I use on my main system.
 
-I manage my dotfiles using a ***Git bare repository**. A setup guide for this method can be found [here](https://www.atlassian.com/git/tutorials/dotfiles).
+I manage my dotfiles using a **Git bare repository**. A setup guide for this method can be found [here](https://www.atlassian.com/git/tutorials/dotfiles).
 
 # Contents
 
