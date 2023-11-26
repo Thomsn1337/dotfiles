@@ -32,6 +32,10 @@ ShowInstallerIsoInfo() {
 
 export PATH=$PATH:~/.config/emacs/bin
 
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux new-session -A -s main
+fi
+
 alias ls='eza -a --group-directories-first'
 alias ll='eza -laH --group-directories-first'   # show long listing of all except ".."
 
@@ -52,5 +56,7 @@ alias lsf='live-server --browser=firefox'     # Start live-server with Firefox
 alias emacsd='/usr/bin/emacs --daemon'                 # Start Emacs daemon
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+stty werase '^H'
 
 eval "$(starship init bash)"
