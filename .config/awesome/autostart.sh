@@ -2,7 +2,6 @@
 
 # Define an array of programs to start
 programs=(
-    "/usr/bin/emacs --daemon"
     "/usr/bin/picom --daemon"
     "/lib/polkit-kde-authentication-agent-1"
     "numlockx on"
