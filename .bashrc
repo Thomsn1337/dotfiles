@@ -32,10 +32,6 @@ ShowInstallerIsoInfo() {
 
 export PATH=$PATH:~/.config/emacs/bin
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s main
-fi
-
 alias ls='eza -a --group-directories-first'
 alias ll='eza -laH --group-directories-first'   # show long listing of all except ".."
 

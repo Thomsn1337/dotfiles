@@ -86,7 +86,7 @@ mytextclock = wibox.widget.textclock()
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-    awful.tag({ "q", "w", "e", "r", "t", "z", "u", "i", "o" }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
     -- Create a taglist widget
     s.mytaglist = awful.widget.taglist {
@@ -94,11 +94,11 @@ screen.connect_signal("request::desktop_decoration", function(s)
         filter  = awful.widget.taglist.filter.all,
         buttons = {
             awful.button({ }, 1, function(t) t:view_only() end),
-            awful.button({ modkey }, 1, function(t)
-                                            if client.focus then
-                                                client.focus:move_to_tag(t)
-                                            end
-                                        end),
+            awful.button({ super }, 1, function(t)
+                if client.focus then
+                    client.focus:move_to_tag(t)
+                end
+            end),
             awful.button({ }, 3, awful.tag.viewtoggle),
             awful.button({ }, 4, function(t) awful.tag.viewprev(t.screen) end),
             awful.button({ }, 5, function(t) awful.tag.viewnext(t.screen) end),
