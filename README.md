@@ -4,14 +4,11 @@ I manage my dotfiles using a **Git bare repository**. A setup guide for this met
 
 # Contents
 
-- AwesomeWM
 - Bash
 - Btop (theming)
-- Emacs/[Doom Emacs](https://github.com/doomemacs/doomemacs)
 - Flameshot
-- Kitty
-- Picom
-- Rofi
+- Neovim
+- Zsh
 
 # Installation
 
