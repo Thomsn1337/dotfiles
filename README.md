@@ -8,6 +8,7 @@ I manage my dotfiles using a **Git bare repository**. A setup guide for this met
 - Btop (theming)
 - Flameshot
 - Neovim
+- Tmux
 - Zsh
 
 # Installation
