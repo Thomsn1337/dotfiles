@@ -6,6 +6,7 @@ duf
 eza
 firefox
 flameshot
+fzf
 gimp
 git
 gparted
