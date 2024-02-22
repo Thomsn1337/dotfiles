@@ -4,6 +4,7 @@ cups
 discord
 duf
 eza
+fd
 firefox
 flameshot
 fzf
@@ -13,6 +14,7 @@ gparted
 hplip
 htop
 jq
+lazygit
 libreoffice-fresh
 mlocate
 neofetch

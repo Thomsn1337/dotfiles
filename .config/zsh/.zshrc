@@ -11,7 +11,10 @@ alias odin='cd ~/Documents/TheOdinProject'    # Quickly change to Odin Project f
 alias lsc='live-server --browser=chromium'    # Start live-server with Chromium
 alias lsf='live-server --browser=firefox'     # Start live-server with Firefox
 
+alias lgit='lazygit'
+
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias ldots='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 function plugin() {
     PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
