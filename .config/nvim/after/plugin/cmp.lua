@@ -6,7 +6,8 @@ luasnip.config.setup {}
 cmp.setup {
     window = {
         completion = {
-            border = "rounded"
+            border = "rounded",
+            keyword_length = 1,
         },
         documentation = {
             border = "rounded"
