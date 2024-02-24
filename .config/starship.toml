@@ -1,7 +1,7 @@
 add_newline = true
 
 [username]
-format = "[$user]($style)@"
+format = " [$user]($style)@"
 style_user = "bold #ed8796"
 style_root = "bold #ed8796"
 show_always = true
@@ -17,8 +17,8 @@ format = "[$path]($style) [$read_only]($read_only_style)"
 style = "#c6a0f6"
 
 [character]
-success_symbol = "[⮩ ](#a6da95)"
-error_symbol = "[⮩ ](#ed8796)"
+success_symbol = " [⮩ ](#a6da95)"
+error_symbol = " [⮩ ](#ed8796)"
 
 [cmd_duration]
 disabled = true
