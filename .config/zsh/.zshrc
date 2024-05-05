@@ -7,7 +7,6 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 alias ls='eza -a --group-directories-first'
 alias ll='eza -laH --group-directories-first'   # show long listing of all except ".."
 
-alias odin='cd ~/Documents/TheOdinProject'    # Quickly change to Odin Project folder
 alias lsc='live-server --browser=chromium'    # Start live-server with Chromium
 alias lsf='live-server --browser=firefox'     # Start live-server with Firefox
 
@@ -31,4 +30,3 @@ plugin "zsh-users/zsh-completions"
 plugin "zsh-users/zsh-syntax-highlighting"
 
 eval "$(starship init zsh)"
-
