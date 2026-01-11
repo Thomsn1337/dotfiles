@@ -1,4 +1,4 @@
-alias ls="eza --group-directories-first"
+alias ls="eza -a --group-directories-first"
 alias ll="eza -la --icons --group-directories-first"
 
 bindkey -e
