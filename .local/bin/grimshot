@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCREENSHOT_DIR="$HOME/Pictures/Screenshots"
+FILE_NAME="$(date +'%Y-%m-%d_%H-%M-%S').png"
+
+copy_only() {
+  grim -g "$(slurp)" - | wl-copy
+}
+
+save_and_copy() {
+  mkdir -p "$SCREENSHOT_DIR"
+  file="$SCREENSHOT_DIR/$FILE_NAME"
+
+  grim -g "$(slurp)" "$file"
+  wl-copy < "$file"
+}
+
+case "${1:-}" in
+  copy)
+    copy_only
+    ;;
+  save)
+    save_and_copy
+    ;;
+  *)
+    echo "usage: $0 {copy|save}" >&2
+    exit 1
+    ;;
+esac
