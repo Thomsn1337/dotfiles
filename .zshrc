@@ -1,6 +1,9 @@
 alias ls="eza -a --group-directories-first"
 alias ll="eza -la --icons --group-directories-first"
 
+alias lgit="lazygit"
+alias lyadm="yadm enter lazygit"
+
 bindkey -e
 
 setopt APPEND_HISTORY
