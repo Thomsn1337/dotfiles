@@ -4,6 +4,7 @@ return {
   opts = {},
   config = function()
     local fzf = require 'fzf-lua'
+    fzf.register_ui_select()
 
     vim.keymap.set('n', '<leader>ff', fzf.files, { desc = 'Find files' })
     vim.keymap.set('n', '<leader>fh', fzf.help_tags, { desc = 'Find help' })

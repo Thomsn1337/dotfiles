@@ -48,7 +48,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-theme = Rose Pine
+theme = TokyoNight
 
 window-inherit-working-directory = false
 confirm-close-surface = false
