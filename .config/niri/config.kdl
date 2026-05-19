@@ -61,7 +61,7 @@ layout {
     }
 }
 
-spawn-sh-at-startup "quickshell"
+spawn-at-startup "qs" "-c" "noctalia-shell"
 
 hotkey-overlay {
     skip-at-startup
@@ -188,4 +188,10 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Ctrl+Alt+Delete { quit; }
+}
+
+environment {
+  GTK_IM_MODULE "ibus"
+  QT_IM_MODULE "ibus"
+  XMODIFIERS "@im=ibus"
 }

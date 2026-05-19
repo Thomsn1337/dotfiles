@@ -38,3 +38,8 @@ if command -v fzf > /dev/null 2>&1; then
 fi
 
 eval "$(starship init zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/thomsn/.lmstudio/bin"
+# End of LM Studio CLI section
+
