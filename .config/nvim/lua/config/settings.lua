@@ -1,3 +1,5 @@
+vim.loader.enable()
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -6,21 +8,18 @@ vim.g.have_nerd_font = true
 vim.o.number = true
 vim.o.relativenumber = true
 
-vim.o.expandtab = true
-vim.o.shiftwidth = 2
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-
 vim.o.mouse = 'a'
 
-vim.o.showmode = false
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
 
+--vim.o.showmode = false
 vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
 
 vim.o.breakindent = true
-
 vim.o.undofile = true
 
 vim.o.ignorecase = true
@@ -40,8 +39,7 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.o.inccommand = 'split'
 
 vim.o.cursorline = true
-vim.o.scrolloff = 8
-
+vim.o.scrolloff = 6
 vim.o.confirm = true
 
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -51,3 +49,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+vim.diagnostic.config {
+  update_in_insert = true,
+  severity_sort = true,
+  underline = { severity = { min = vim.diagnostic.severity.WARN } },
+
+  virtual_lines = false,
+  virtual_text = true,
+}

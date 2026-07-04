@@ -1,15 +1,9 @@
-return {
-  'stevearc/oil.nvim',
-  ---@module 'oil'
-  ---@type oil.SetupOpts
-  opts = {
-    view_options = {
-      show_hidden = true,
-    },
-  },
-  dependencies = { { 'nvim-mini/mini.icons', opts = {} } },
-  lazy = false,
-  keys = {
-    { '-', '<cmd>Oil<CR>', desc = 'File explorer' },
+vim.pack.add { 'https://github.com/stevearc/oil.nvim' }
+
+require('oil').setup {
+  view_options = {
+    show_hidden = true,
   },
 }
+
+vim.keymap.set('n', '-', vim.cmd.Oil)

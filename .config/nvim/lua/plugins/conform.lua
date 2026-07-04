@@ -1,32 +1,17 @@
-return {
-  'stevearc/conform.nvim',
-  event = { 'BufWritePre' },
-  cmd = { 'ConformInfo' },
-  keys = {
-    {
-      '<leader>gf',
-      function()
-        require('conform').format { async = true, lsp_format = 'fallback' }
-      end,
-      mode = '',
-      desc = 'Format buffer',
-    },
+vim.pack.add { 'https://github.com/stevearc/conform.nvim' }
+
+local conform = require 'conform'
+conform.setup {
+  notify_on_error = false,
+  format_on_save = {
+    lsp_format = 'fallback',
+    timeout_ms = 500,
   },
-  opts = {
-    notify_on_error = false,
-    format_on_save = function(bufnr)
-      local disable_filetypes = { c = true, cpp = true }
-      if disable_filetypes[vim.bo[bufnr].filetype] then
-        return nil
-      else
-        return {
-          timeout_ms = 500,
-          lsp_format = 'fallback',
-        }
-      end
-    end,
-    formatters_by_ft = {
-      lua = { 'stylua' },
-    },
+  default_format_opts = {
+    lsp_format = 'fallback',
   },
 }
+
+vim.keymap.set({ 'n', 'v' }, '<leader>f', function()
+  conform.format { async = true }
+end, { desc = '[F]ormat buffer' })
