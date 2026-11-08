@@ -6,7 +6,7 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/dev/flutter/bin:$PATH"
+export PATH="$HOME/fvm/default/bin:$PATH"
 
 export CHROME_EXECUTABLE=/usr/bin/brave
 
