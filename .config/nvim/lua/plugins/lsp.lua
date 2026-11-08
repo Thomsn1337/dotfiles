@@ -88,6 +88,13 @@ local servers = {
   zls = {},
 
   clangd = {},
+
+  ---@type vim.lsp.Config
+  roslyn_ls = {
+    settings = {
+      ['csharp|formatting'] = {},
+    },
+  },
 }
 
 require('mason').setup {}
