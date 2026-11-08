@@ -61,7 +61,8 @@ layout {
     }
 }
 
-spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "noctalia"
+spawn-at-startup "swayidle" "-w" "timeout" "900" "niri msg action power-off-monitors" "resume" "niri msg action power-on-monitors" "timeout" "1800" "systemctl suspend" "before-sleep" "niri msg action power-off-monitors"
 
 hotkey-overlay {
     skip-at-startup
