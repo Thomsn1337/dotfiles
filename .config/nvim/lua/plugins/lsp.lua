@@ -22,6 +22,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('gra', vim.lsp.buf.code_action, 'Goto Code Action', { 'n', 'x' })
     map('grD', vim.lsp.buf.declaration, 'Goto Declaration')
     map('grd', vim.lsp.buf.definition, 'Goto Definition')
+    map('<leader>q', vim.diagnostic.setloclist, 'Open diagnostic quickfix list')
 
     local client = vim.lsp.get_client_by_id(event.data.client_id)
     if client and client:supports_method('textDocument/documentHighlight', event.buf) then
