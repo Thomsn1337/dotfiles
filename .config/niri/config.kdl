@@ -71,7 +71,7 @@ hotkey-overlay {
 screenshot-path null
 
 layer-rule {
-  match namespace="^noctalia-overview*"
+  match namespace="^noctalia-backdrop*"
   place-within-backdrop true
 }
 
